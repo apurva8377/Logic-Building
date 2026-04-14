@@ -1,0 +1,99 @@
+//////////////////////////////////////////////////////////////////
+//
+//  File Name : Program311.cpp
+//  Description : Programs in C++ (Array) (Segmentation fault occurs)
+//  Name : Apurva Vilas Shinde
+//  Date : 8/4/2026
+//
+/////////////////////////////////////////////////////////////////
+
+#include<iostream>
+using namespace std;
+
+template <class T>
+class ArrayX
+{
+    private:               
+        T *Arr;
+        int iSize;
+
+    public:
+        ArrayX(int iLength = 5)
+        {
+            cout<<"Inside constructor\n";
+            iSize = iLength;
+            Arr = new int[iSize];
+        }
+
+        ~ArrayX()
+        {
+            cout<<"Inside destructor\n";
+            delete []Arr;
+        }
+
+        void Accept()
+        {
+            int iCnt = 0;
+
+            cout<<"Enter the elements : \n";
+            for(iCnt = 0; iCnt < iSize; iCnt++)
+            {
+                cin>>Arr[iCnt];
+            }
+        }
+
+        void Display()
+        {
+            int iCnt = 0;
+
+            cout<<"Elements of the arary are : \n";
+            for(iCnt = 0; iCnt < iSize; iCnt++)
+            {
+                cout<<Arr[iCnt]<<"\n";
+            }
+        }
+
+        T Maximum()
+        {
+            T iMax = 0; 
+            int iCnt = 0;
+
+            iMax = Arr[0];
+
+            for(iCnt = 0; iCnt < iSize; iCnt++)
+            {
+                if(Arr[iCnt] > iMax)
+                {
+                    iMax = Arr[iCnt];
+                }
+            }
+
+            return iMax;
+        }
+};
+
+int main()
+{
+    /*ArrayX aobj(5);
+
+    aobj.Accept();
+    aobj.Display();
+
+    int iRet = 0;
+    iRet = aobj.Maximum();
+
+    cout<<"Maximum is : "<<iRet<<"\n";
+    */
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
