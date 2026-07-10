@@ -1,0 +1,53 @@
+/////////////////////////////////////////////////////////
+//
+//  Program Name :  Program35.c
+//  Discription  :  Program to display "Jay ganesh" on console using Loop.
+//  Function     :  Display()
+//  Author       :  Apurva Vilas Shinde
+//  Date         :  10/07/2026
+//
+//////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////
+//
+// Required Header files
+//
+/////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+/////////////////////////////////////////////////////////////
+//
+//  Function Name :     Display()
+//  Description :       It is used to display 5 "*" on console
+//  Input :             5
+//  Output :            5   4   3   2   1
+//  Author :            Apurva Vilas Shinde
+//  Date :              9/07/2026
+//
+/////////////////////////////////////////////////////////////
+
+void Dipslay()
+{
+    int iCnt = 0;
+
+    for(iCnt = 5; iCnt >= 1; iCnt--)
+    {
+        printf("%d\t",iCnt);
+    }
+
+    printf("\n");
+}
+
+/////////////////////////////////////////////////////////////
+//
+//  Entry point function of the application
+//  
+/////////////////////////////////////////////////////////////
+
+int main()
+{
+    Dipslay();
+
+    return 0;
+}
