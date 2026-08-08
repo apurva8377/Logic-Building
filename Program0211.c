@@ -1,0 +1,28 @@
+/////////////////////////////////////////////////////////
+//
+//  Program Name  : Program0210.c
+//  Description   : Problems on String
+//  Author        : Apurva Vilas Shinde
+//  Date          : 08/08/2026
+//
+//////////////////////////////////////////////////////////
+
+#include<stdio.h>
+#include<string.h>
+
+/////////////////////////////////////////////////////////
+//
+//  Entry point function of an application
+//
+////////////////////////////////////////////////////////
+
+int main()
+{
+    char Arr[] = {'H','e','l','l','o','\0'};
+
+    printf("%s\n",Arr);          // Hello
+    printf("%ld\n",sizeof(Arr)); // 6
+    printf("%ld\n",strlen(Arr));  // 5
+
+    return 0;
+}

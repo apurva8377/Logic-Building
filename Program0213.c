@@ -1,0 +1,30 @@
+/////////////////////////////////////////////////////////
+//
+//  Program Name  : Program0213.c
+//  Description   : Problems on String
+
+
+//  Author        : Apurva Vilas Shinde
+//  Date          : 08/08/2026
+//
+//////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+/////////////////////////////////////////////////////////
+//
+//  Entry point function of an application
+//
+////////////////////////////////////////////////////////
+
+int main()
+{
+    char Name[50] = {'\0'};
+
+    printf("Enter your name : \n");
+    scanf("%[^'\n']s",Name);
+
+    printf("Hello %s\n",Name);
+
+    return 0;
+}
