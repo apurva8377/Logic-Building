@@ -1,0 +1,135 @@
+/////////////////////////////////////////////////////////
+//
+//  Program Name  : Program0422.cpp
+//  Description   : Problems on data structures and algorithms
+//  Author        : Apurva Vilas Shinde
+//  Date          : 2/09/2026
+//
+//////////////////////////////////////////////////////////
+
+#include<iostream>
+using namespace std;
+
+/////////////////////////////////////////////////////////
+//
+//  Entry point function of an application
+//
+////////////////////////////////////////////////////////
+
+struct node
+{
+    int data;
+    struct node *next;
+};
+
+typedef struct node NODE;
+typedef struct node * PNODE;
+typedef struct node ** PPNODE;
+
+class SinglyLLL
+{
+    public:                  // Characteristic
+    PNODE first;
+    int iCount;
+
+    SinglyLLL()             // Default constructor
+    {
+        cout<<"Object of SinglyLLL gets created.\n";
+        first = NULL;
+        iCount = 0;
+    }
+
+    void InsertFirst(int no)
+    {
+        PNODE newn = NULL;
+
+        newn = new NODE;
+
+        newn->data = no;
+        newn->next = NULL;
+
+        if(first == NULL)
+        {
+            first = newn;
+        }
+        else
+        {
+            newn->next = first;
+            first = newn;
+        }
+
+        iCount++;
+    }
+
+    void InsertLast(int no)
+    {
+        PNODE newn = NULL;
+
+        newn = new NODE;
+
+        newn->data = no;
+        newn->next = NULL;
+
+        if(first == NULL)
+        {
+            first = newn;
+        }
+        else
+        {
+    
+        }
+
+        iCount++;
+    }
+
+    void InsertAtPos(int no, int pos)
+    {}
+
+    void DeleteFirst()
+    {}
+
+    void DeleteLast()
+    {}
+
+    void DeleteAtPos(int pos)
+    {}
+
+    void Display()
+    {
+        PNODE temp = NULL;
+
+        temp = first;
+
+        while(temp != NULL)
+        {
+            cout<<"| "<<temp->data<<" | -> ";
+            temp = temp->next;
+        }
+
+        cout<<"NULL\n";
+    }
+
+    int Count()
+    {
+        return iCount;
+    }
+};
+
+int main()
+{
+    SinglyLLL obj;
+    int iRet = 0;
+
+    obj.InsertFirst(51);
+    obj.InsertFirst(21);
+    obj.InsertFirst(11);
+    obj.InsertFirst(5);
+
+    obj.Display();
+
+    iRet = obj.Count();
+    cout<<"Number of nodes are : "<<iRet<<"\n";
+
+    return 0;
+}
+
